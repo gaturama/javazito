@@ -27,19 +27,18 @@ public class ExercicioUm {
             System.err.println(e.getMessage());
             menu = 0;
         }
-
         switch (menu) {
             // 1) Crie um programa que calcule a média (`(nota1 + nota2 + nota3 / 3)`)
             case 1:
-                // media(double notaUm, double notaDois, double notaTres)
+                 System.out.println(" A média é: " + media(8,6,7));
                 break;
             // 2) Crie um programa que calcule a área (`lado1 * lado2`)
             case 2:
-                // area(double ladoUm, double ladoDois)
+                 System.out.println(" A área é: " + area(3,5));
                 break;
             // 3) Crie um programa que calcule o volume (`largura * altura * profundidade`)
             case 3:
-                // volume(double largura, double altura, double profundidade)
+                System.out.println(" O Volume é: " + volume(15,10,5));
                 break;
             // 4) Crie um programa que avalie se um valor é maior do que o dobro de outro valor
             case 4:
@@ -51,7 +50,7 @@ public class ExercicioUm {
                 break;
             // 6) Crie um programa que calcule a velocidade média de uma viagem (`distancia (km) / tempo (h)`)
             case 6:
-                // mediaViagem(double distancia, double tempo)
+                System.out.println(" A velocidade média de uma viagem é: " + mediaViagem(5,2));
                 break;
             // 7) Crie um programa que calcule o percentual de imposto pago (`faturamento \ qtd imposto`)
             case 7:
@@ -60,6 +59,16 @@ public class ExercicioUm {
             // 8) Crie um programa que teste se um valor é par ou ímpar
             case 8:
                 // parOuImpar(int valor)
+                int valor=3;
+
+                if (valor % 2==0)
+                {
+                    System.out.println ("É par");
+                }
+                else 
+                {
+                    System.out.println ("É ímpar");
+                }
                 break;
             // 9) Crie um programa que compare dois valores Strings
             case 9:
