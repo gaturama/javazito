@@ -100,15 +100,15 @@ public class ExercicioUm {
     }
 
     public static double media(double notaUm, double notaDois, double notaTres) {
-        return 0;
+        return (notaUm + notaDois + notaTres)/3;
     }
 
     public static double area(double ladoUm, double ladoDois) {
-        return 0;
+        return (ladoUm * ladoDois);
     }
 
     public static double volume(double largura, double altura, double profundidade) {
-        return 0;
+        return (largura * altura * profundidade);
     }
 
     public static boolean valorMaiorQueDobro(double base, double verificar) {
@@ -120,7 +120,7 @@ public class ExercicioUm {
     }
 
     public static double mediaViagem(double distancia, double tempo) {
-        return 0;
+        return (distancia / tempo);
     }
 
     public static double percentualImposto(double faturamento, double qtdImposto) {
