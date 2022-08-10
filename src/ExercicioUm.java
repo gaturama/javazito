@@ -31,6 +31,7 @@ public class ExercicioUm {
             // 1) Crie um programa que calcule a média (`(nota1 + nota2 + nota3 / 3)`)
             case 1:
                  System.out.println(" A média é: " + media(8,6,7));
+                 
                 break;
             // 2) Crie um programa que calcule a área (`lado1 * lado2`)
             case 2:
@@ -42,19 +43,19 @@ public class ExercicioUm {
                 break;
             // 4) Crie um programa que avalie se um valor é maior do que o dobro de outro valor
             case 4:
-                // valorMaiorQueDobro(double base, double verificar)
+                System.out.println(" ");
                 break;
             // 5) Crie um programa que calcule _bhaskara_
             case 5:
-                // bhaskara(int a, int b, int c);
+                System.out.println(" O valor de Bhaskara é: " + bhaskara(20,2,4));
                 break;
             // 6) Crie um programa que calcule a velocidade média de uma viagem (`distancia (km) / tempo (h)`)
             case 6:
-                System.out.println(" A velocidade média de uma viagem é: " + mediaViagem(5,2));
+                System.out.println(" A velocidade média de uma viagem é: " + mediaViagem(82,0.60));
                 break;
             // 7) Crie um programa que calcule o percentual de imposto pago (`faturamento \ qtd imposto`)
             case 7:
-                // percentualImposto(double faturamento, double qtdImposto)
+                System.out.println("O percentual de Imposto pago é: " + percentualImposto(5,50));
                 break;
             // 8) Crie um programa que teste se um valor é par ou ímpar
             case 8:
@@ -112,11 +113,29 @@ public class ExercicioUm {
     }
 
     public static boolean valorMaiorQueDobro(double base, double verificar) {
-        return false;
+        if (base > verificar * 2){
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public static double[] bhaskara(int a, int b, int c) {
-        return new double[2];
+        double delta = (b * b) - ( 4 * a * c);
+        double x1 = 0;
+        double x2 = 0;
+        if (delta < 0){
+            System.out.println("Delta é negativo");
+        } else if (delta == 0){
+            x1 = -b / (2 *a);
+            x2 = x1;
+        }else {
+            x1 = ( -b + Math.sqrt(delta)) / ( 2 * a);
+            x2 = ( -b - Math.sqrt(delta)) / ( 2 * a);
+        }
+        System.out.println (x1);
+        System.out.println (x2);
+        return new double[] {x1,x2};
     }
 
     public static double mediaViagem(double distancia, double tempo) {
@@ -124,11 +143,11 @@ public class ExercicioUm {
     }
 
     public static double percentualImposto(double faturamento, double qtdImposto) {
-        return 0;
+        return (qtdImposto * 100/ faturamento);
     }
 
     public static boolean parOuImpar(int valor) {
-        return false;
+        return false; 
     }
 
     public static boolean compareString(String stringUm, String stringDois) {
