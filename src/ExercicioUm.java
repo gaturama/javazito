@@ -30,8 +30,7 @@ public class ExercicioUm {
         switch (menu) {
             // 1) Crie um programa que calcule a média (`(nota1 + nota2 + nota3 / 3)`)
             case 1:
-                 System.out.println(" A média é: " + media(8,6,7));
-                 
+                // media(double notaUm, double notaDois, double notaTres)
                 break;
             // 2) Crie um programa que calcule a área (`lado1 * lado2`)
             case 2:
@@ -51,7 +50,7 @@ public class ExercicioUm {
                 break;
             // 6) Crie um programa que calcule a velocidade média de uma viagem (`distancia (km) / tempo (h)`)
             case 6:
-                System.out.println(" A velocidade média de uma viagem é: " + mediaViagem(82,0.60));
+                // mediaViagem(double distancia, double tempo)
                 break;
             // 7) Crie um programa que calcule o percentual de imposto pago (`faturamento \ qtd imposto`)
             case 7:
@@ -101,7 +100,7 @@ public class ExercicioUm {
     }
 
     public static double media(double notaUm, double notaDois, double notaTres) {
-        return (notaUm + notaDois + notaTres)/3;
+        return 0;
     }
 
     public static double area(double ladoUm, double ladoDois) {
