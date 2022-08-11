@@ -30,7 +30,7 @@ public class ExercicioUm {
         switch (menu) {
             // 1) Crie um programa que calcule a média (`(nota1 + nota2 + nota3 / 3)`)
             case 1:
-                // media(double notaUm, double notaDois, double notaTres)
+                System.out.println("A média de notas é: " + media(8,6,8));
                 break;
             // 2) Crie um programa que calcule a área (`lado1 * lado2`)
             case 2:
@@ -100,7 +100,7 @@ public class ExercicioUm {
     }
 
     public static double media(double notaUm, double notaDois, double notaTres) {
-        return 0;
+        return (notaUm + notaDois + notaTres) /3;
     }
 
     public static double area(double ladoUm, double ladoDois) {
