@@ -42,7 +42,7 @@ public class ExercicioUm {
                 break;
             // 4) Crie um programa que avalie se um valor é maior do que o dobro de outro valor
             case 4:
-                System.out.println(" ");
+                System.out.println("valor maior que o dobro é: " + valorMaiorQueDobro(12, 9));
                 break;
             // 5) Crie um programa que calcule _bhaskara_
             case 5:
