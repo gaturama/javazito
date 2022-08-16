@@ -46,7 +46,7 @@ public class ExercicioUm {
                 break;
             // 5) Crie um programa que calcule _bhaskara_
             case 5:
-                System.out.println(" O valor de Bhaskara é: " + bhaskara(2,3,2));
+                bhaskara(1, 4, 1);
                 break;
             // 6) Crie um programa que calcule a velocidade média de uma viagem (`distancia (km) / tempo (h)`)
             case 6:
@@ -120,21 +120,21 @@ public class ExercicioUm {
     }
 
     public static double[] bhaskara(int a, int b, int c) {
-        double delta = (b * b) - ( 4 * a * c);
+        double delta = (b * b) - (4 * a * c);
         double x1 = 0;
         double x2 = 0;
-        if (delta < 0){
+        if (delta < 0) {
             System.out.println("Delta é negativo");
-        } else if (delta == 0){
-            x1 = -b / (2 *a);
+        } else if (delta == 0) {
+            x1 = -b / (2 * a);
             x2 = x1;
-        }else {
-            x1 = ( -b + Math.sqrt(delta)) / ( 2 * a);
-            x2 = ( -b - Math.sqrt(delta)) / ( 2 * a);
+        } else {
+            x1 = (-b + Math.sqrt(delta)) / (2 * a);
+            x2 = (-b - Math.sqrt(delta)) / (2 * a);
         }
-        System.out.println (x1);
-        System.out.println (x2);
-        return new double[] {x1,x2};
+        System.out.println(x1);
+        System.out.println(x2);
+        return new double[] { x1, x2 };
     }
 
     public static double mediaViagem(double distancia, double tempo) {
