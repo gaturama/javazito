@@ -46,7 +46,7 @@ public class ExercicioUm {
                 break;
             // 5) Crie um programa que calcule _bhaskara_
             case 5:
-                System.out.println(" O valor de Bhaskara é: " + bhaskara(20,2,4));
+                System.out.println(" O valor de Bhaskara é: " + bhaskara(2,3,2));
                 break;
             // 6) Crie um programa que calcule a velocidade média de uma viagem (`distancia (km) / tempo (h)`)
             case 6:
@@ -59,7 +59,7 @@ public class ExercicioUm {
             // 8) Crie um programa que teste se um valor é par ou ímpar
             case 8:
                 // parOuImpar(int valor)
-                int valor=3;
+                int valor=3;    
 
                 if (valor % 2==0)
                 {
