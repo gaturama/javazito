@@ -50,7 +50,7 @@ public class ExercicioUm {
                 break;
             // 6) Crie um programa que calcule a velocidade média de uma viagem (`distancia (km) / tempo (h)`)
             case 6:
-                mediaViagem(200, 5);
+                System.out.println("a velocidade média de uma viagem é: " + mediaViagem(200, 5));
                 break;
             // 7) Crie um programa que calcule o percentual de imposto pago (`faturamento \ qtd imposto`)
             case 7:
@@ -89,7 +89,7 @@ public class ExercicioUm {
             case 11:
                 System.out.println("O percentual de Imposto é: " + percentualImposto(1200, 2));
                 break;
-            // DESAFIO - Crie um programa que teste se um número é primo
+            
             case 12:
                 System.out.println("Teste se o número é primo: " + testePrimo(3));
                 break;
