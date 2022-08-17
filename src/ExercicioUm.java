@@ -50,7 +50,7 @@ public class ExercicioUm {
                 break;
             // 6) Crie um programa que calcule a velocidade média de uma viagem (`distancia (km) / tempo (h)`)
             case 6:
-                // mediaViagem(double distancia, double tempo)
+                mediaViagem(200, 5);
                 break;
             // 7) Crie um programa que calcule o percentual de imposto pago (`faturamento \ qtd imposto`)
             case 7:
@@ -87,11 +87,11 @@ public class ExercicioUm {
             // De 3.751,06 até 4.664,68 | 22,5%
             // Acima de 4.664,68        | 27,5%
             case 11:
-                // percentualImpostoSalario(double salario);
+                System.out.println("O percentual de Imposto é: " + percentualImposto(1200, 2));
                 break;
             // DESAFIO - Crie um programa que teste se um número é primo
             case 12:
-                // testePrimo(int valor)
+                System.out.println("Teste se o número é primo: " + testePrimo(3));
                 break;
             default:
                 System.out.println("Operação inválida");
@@ -158,11 +158,28 @@ public class ExercicioUm {
     }
 
     public static double percentualImpostoSalario(double salario) {
-        return -1;
+        double percentual = -1;
+        if (salario <= 1903.98) {//Até 1.903,98             | Isento
+            percentual = 0;
+        } else if (salario <= 1903.99 && salario >= 2826.65) { //De 1.903,99 até 2.826,65 | 7,5%
+            percentual = 7.5;
+        } else if (salario <= 2826.66 && salario >= 3751.05) { // De 2.826,66 até 3.751,05 | 15% 
+            percentual = 15;
+        } else if (salario <= 3751.06 && salario >= 5664.68) { // De 3.751,06 até 4.664,68 | 22,5%
+            percentual = 22.5;
+        } else if (salario > 4664.68) { // Acima de 4.664,68        | 27,5%
+            percentual = 27.5;
+        }
+        return percentual;  
     }
 
     public static boolean testePrimo(int valor) {
-        return false;
+        for(int i = 2; i < valor; i++) {
+            if(valor % i == 0) {
+                return false;
+            }
+        }
+        return true ;
     }
 
 }
