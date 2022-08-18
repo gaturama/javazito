@@ -77,7 +77,8 @@ public class ExercicioUm {
             // 10) Crie um programa que tenha uma variável com ponto em String e converta seu valor para inteiro
             case 10:
                 // convertString(String valor);
-                break;
+                System.out.print("a conversão de string é " + convertString ("15.5"));
+                break; 
             // 11) Crie um programa que receba o salário e diga o valor de imposto de renda conforme abaixo:
             // Base                     | Alíquota
             // ---------                | ------
@@ -153,8 +154,12 @@ public class ExercicioUm {
         return false;
     }
 
-    public static int convertString(String valor) {
-        return 0;
+    public static int convertString (String str) {
+        
+        double stringToDouble = Double.parseDouble(str);
+        int doubleToInt = (int) stringToDouble;
+    
+        return doubleToInt;
     }
 
     public static double percentualImpostoSalario(double salario) {
