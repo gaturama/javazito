@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import javax.print.attribute.standard.Media;
+
 public class ExercicioDois {
 
 
@@ -32,10 +34,12 @@ public class ExercicioDois {
             // 1) Crie um programa que receba três notas calcule a média e diga se foi aprovado (`(nota1 + nota2 + nota3 / 3)`) e (`média maior que 7 para ser aprovado`).
             case 1:
                 // calculaMedia(double notaUm, double notaDois, double notaTres);
+                System.out.println(" O valor da média é: " + calculaMedia(8,9,7));
                 break;
             // 2) Crie um programa que receba um número e indique o mês que representa.
             case 2:
                 // qualMes(int mes);
+                System.out.println("Qual é o mês: " + qualMes(6     ));
                 break;
             // 3) Crie um programa que simule um jogo da forca, com a entrada da palavra oculta, a quantidade de tentativas para acerto e depois solicite a entrada da palavra. A cada erro deve imprimir a quantidade de tentativas restantes e o 'membro' que foi marcado. Ao final deve imprimir se acertou ou não a palavra e se foi 'enforcado'.
             case 3:
@@ -88,10 +92,25 @@ public class ExercicioDois {
     }
 
     public static double calculaMedia(double notaUm, double notaDois, double notaTres) {
-        return 0;
+
+            double notas = (notaUm + notaDois + notaTres) /3;       
+            if ( notas > 7.0){
+                System.out.println("Você foi aprovado");
+            }
+            else if ( notas < 7.0) {
+                System.out.println("Infelizmente você foi reprovado");
+            }
+        return 0;       
     }
 
     public static String qualMes(int mes) {
+ // 2) Crie um programa que receba um número e indique o mês que representa.
+    switch (meses) {
+     case 1:
+
+  }
+
+    
         return "";
     }
 
