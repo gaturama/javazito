@@ -39,7 +39,7 @@ public class ExercicioDois {
             // 2) Crie um programa que receba um número e indique o mês que representa.
             case 2:
                 // qualMes(int mes);
-                System.out.println("Qual é o mês: " + qualMes(6     ));
+                System.out.println("Qual é o mês: " + qualMes(6));
                 break;
             // 3) Crie um programa que simule um jogo da forca, com a entrada da palavra oculta, a quantidade de tentativas para acerto e depois solicite a entrada da palavra. A cada erro deve imprimir a quantidade de tentativas restantes e o 'membro' que foi marcado. Ao final deve imprimir se acertou ou não a palavra e se foi 'enforcado'.
             case 3:
@@ -105,12 +105,43 @@ public class ExercicioDois {
 
     public static String qualMes(int mes) {
  // 2) Crie um programa que receba um número e indique o mês que representa.
-    switch (meses) {
+    switch (mes) {
      case 1:
+     System.out.println("Janeiro");
+     break;
 
-  }
+     case 2:
+     System.out.println("Fevereiro");
+     break;
 
-    
+     case 3:
+     System.out.println("Março");   
+     break;
+     
+     case 4:
+     System.out.println("Abril");
+     break;
+
+     case 5:
+     System.out.println("Maio");
+     break;
+
+     case 6:
+     System.out.println("Junho");
+     break;
+     
+     case 7:
+     System.out.println("Julho");
+     break;
+
+     case 8:
+     System.out.println("Agosto");
+     break;
+
+     case 9:
+     System.out.println("Setembro");
+     break;
+    }
         return "";
     }
 
