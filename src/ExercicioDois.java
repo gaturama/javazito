@@ -39,11 +39,74 @@ public class ExercicioDois {
             // 2) Crie um programa que receba um número e indique o mês que representa.
             case 2:
                 // qualMes(int mes);
-                System.out.println("Qual é o mês: " + qualMes(6));
+                System.out.println ("Digite um número referente ao mês desejado: ");
+                int mes = scanner.nextInt();
+
+                switch (mes) {  
+
+                    case 1:
+                    System.out.println("Janeiro");
+                    break;
+               
+                    case 2:
+                    System.out.println("Fevereiro");
+                    break;
+               
+                    case 3:
+                    System.out.println("Março");   
+                    break;
+                    
+                    case 4:
+                    System.out.println("Abril");
+                    break;
+               
+                    case 5:
+                    System.out.println("Maio");
+                    break;
+               
+                    case 6:
+                    System.out.println("Junho");
+                    break;
+                    
+                    case 7:
+                    System.out.println("Julho");
+                    break;
+               
+                    case 8:
+                    System.out.println("Agosto");
+                    break;
+               
+                    case 9:
+                    System.out.println("Setembro");
+                    break;
+               
+                    case 10:
+                    System.out.println("Outubro");
+                    break;
+               
+                    case 11:
+                    System.out.println("Novembro");
+                    break;
+               
+                    case 12:
+                    System.out.println("Dezembro");
+                    break;
+                   }
+
+                
                 break;
             // 3) Crie um programa que simule um jogo da forca, com a entrada da palavra oculta, a quantidade de tentativas para acerto e depois solicite a entrada da palavra. A cada erro deve imprimir a quantidade de tentativas restantes e o 'membro' que foi marcado. Ao final deve imprimir se acertou ou não a palavra e se foi 'enforcado'.
             case 3:
                 // forca(String palavra, int tentativa, Scanner scanner);
+                System.out.println(" Digite a palavra oculta");
+                String palavra = scanner.next();
+                System.out.println(" Digite a quantidade de tentativas");
+                int tentativas = scanner.nextInt();
+
+                for ( int i = tentativas; i > 0; i--){
+                    System.out.println("Digite a palavra da tentativa");
+                    String palavraTentativa;
+                }
                 break;
             // 4) Crie um programa que imprima a tabuada de 0 a 10.
             case 4:
@@ -52,6 +115,8 @@ public class ExercicioDois {
             // 5) Crie um programa que receba uma String e imprima linha a linha suas letras.
             case 5:
                 // letraALetra(String palavra);
+                System.out.println(" digite a palavra ");
+
                 break;
             // 6) Crie um programa que de a soma de todos os números ímpares e múltiplos de 7 entre 1 e 500.
             case 6:
@@ -105,47 +170,12 @@ public class ExercicioDois {
 
     public static String qualMes(int mes) {
  // 2) Crie um programa que receba um número e indique o mês que representa.
-    switch (mes) {
-     case 1:
-     System.out.println("Janeiro");
-     break;
-
-     case 2:
-     System.out.println("Fevereiro");
-     break;
-
-     case 3:
-     System.out.println("Março");   
-     break;
-     
-     case 4:
-     System.out.println("Abril");
-     break;
-
-     case 5:
-     System.out.println("Maio");
-     break;
-
-     case 6:
-     System.out.println("Junho");
-     break;
-     
-     case 7:
-     System.out.println("Julho");
-     break;
-
-     case 8:
-     System.out.println("Agosto");
-     break;
-
-     case 9:
-     System.out.println("Setembro");
-     break;
-    }
         return "";
     }
 
     public static int[] tabuada(int numero) {
+        // 3) Crie um programa que simule um jogo da forca, com a entrada da palavra oculta, a quantidade de tentativas para acerto e depois solicite a entrada da palavra. A cada erro deve imprimir a quantidade de tentativas restantes e o 'membro' que foi marcado. Ao final deve imprimir se acertou ou não a palavra e se foi 'enforcado'.
+        
         return new int[10];
     }
 
