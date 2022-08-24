@@ -88,7 +88,7 @@ public class ExercicioUm {
             // De 3.751,06 até 4.664,68 | 22,5%
             // Acima de 4.664,68        | 27,5%
             case 11:
-                System.out.println("O percentual de Imposto é: " + percentualImposto(1200, 2));
+                System.out.println("O percentual de Imposto é: " + percentualImposto(2700, 7.5));
                 break;
             
             case 12:
@@ -164,15 +164,15 @@ public class ExercicioUm {
 
     public static double percentualImpostoSalario(double salario) {
         double percentual = -1;
-        if (salario <= 1903.98) {//Até 1.903,98             | Isento
+        if (salario <= 1903.98) {
             percentual = 0;
-        } else if (salario <= 1903.99 && salario >= 2826.65) { //De 1.903,99 até 2.826,65 | 7,5%
+        } else if (salario <= 1903.99 && salario >= 2826.65) { 
             percentual = 7.5;
-        } else if (salario <= 2826.66 && salario >= 3751.05) { // De 2.826,66 até 3.751,05 | 15% 
+        } else if (salario <= 2826.66 && salario >= 3751.05) { 
             percentual = 15;
-        } else if (salario <= 3751.06 && salario >= 5664.68) { // De 3.751,06 até 4.664,68 | 22,5%
+        } else if (salario <= 3751.06 && salario >= 5664.68) { 
             percentual = 22.5;
-        } else if (salario > 4664.68) { // Acima de 4.664,68        | 27,5%
+        } else if (salario > 4664.68) { 
             percentual = 27.5;
         }
         return percentual;  
