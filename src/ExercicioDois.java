@@ -115,7 +115,13 @@ public class ExercicioDois {
             // 5) Crie um programa que receba uma String e imprima linha a linha suas letras.
             case 5:
                 // letraALetra(String palavra);
-                System.out.println(" digite a palavra ");
+                System.out.println(" digite a palavra: ");
+                String palavraLetraAletra = scanner.next();
+                char[] letras = letraALetra(palavraLetraAletra);
+
+                for (char letra : letras) {
+                    System.out.println(letra);
+                }
 
                 break;
             // 6) Crie um programa que de a soma de todos os números ímpares e múltiplos de 7 entre 1 e 500.
