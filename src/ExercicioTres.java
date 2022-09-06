@@ -37,6 +37,7 @@ public class ExercicioTres {
             // 1) Crie um programa que receba um valor e calcule a tabuada deste valor, salvando seu resultado em um arquivo de texto.
             case 1:
                 // tabuada(int number);
+                int[] tabuada = new int [10];
                 break;
             // 2) Crie um programa que leia e imprima no console todas as linhas de um arquivo de texto.
             case 2:
@@ -86,6 +87,7 @@ public class ExercicioTres {
     }
 
     public static void tabuada(int numero) {
+        
         
     }
 
