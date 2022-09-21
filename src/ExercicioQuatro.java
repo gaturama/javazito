@@ -33,11 +33,18 @@ public class ExercicioQuatro {
         switch (menu) {
             // 1) Crie um programa que questione a quantidade de notas a ser informada, receba as notas e calcule a média.
             case 1:
-                // calculaMedia(double[] notas)
+            System.out.println("Digite a quantidade de notas: ");
+            int qtdNotas = scanner.nextInt();
+            double[] notas = new double[qtdNotas];
+            for (int i = 0; i < qtdNotas; i++)
+                
+            
+
                 break;
             // 2) Crie um programa que imprima um arrays com Foreach.
             case 2:
                 // printArray(new String[]{ "Teste", "imprimir", "foreach" });
+                printArray(new String[] { " Teste", "Imprimir, "});
                 break;
             // 3) Crie um programa que leia 10 valores double e salve em um array, depois imprima esses valores.
             case 3:
@@ -88,6 +95,10 @@ public class ExercicioQuatro {
     }
     // 2) Crie um programa que imprima um arrays com Foreach.
     public static void printArray(String[] array) {
+            for (String string : array){
+                System.out.println(String);
+            }
+        }
         
     }
     // 3) Crie um programa que leia 10 valores double e salve em um array, depois imprima esses valores.

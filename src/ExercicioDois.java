@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 
 import javax.print.attribute.standard.Media;
 
@@ -105,7 +106,18 @@ public class ExercicioDois {
 
                 for ( int i = tentativas; i > 0; i--){
                     System.out.println("Digite a palavra da tentativa");
-                    String palavraTentativa;
+                    
+                    String palavraTentativa = scanner.next();
+
+                    if (palavra.equals(palavraTentativa)) {
+                        System.out.println("Acertou!!");
+                        break;
+                    }else{
+                        System.out.println("Errou!!");
+                        if (i == 1){
+                            System.out.println("Enforcado!");
+                        }
+                    }
                 }
                 break;
             // 4) Crie um programa que imprima a tabuada de 0 a 10.
@@ -127,6 +139,7 @@ public class ExercicioDois {
             // 6) Crie um programa que de a soma de todos os números ímpares e múltiplos de 7 entre 1 e 500.
             case 6:
                 // numerosImpares();
+                System.out.println("A soma dos números ímpares e múltiplos de 7 entre 1 e 500 é:" + numerosImpares());
                 break;
             // 7) Crie um programa que tenha como entrada as notas de um aluno. Somente se encerrará quando for inserida uma nota negativa. Ao final deverá informar a média das notas.
             case 7:
@@ -143,19 +156,53 @@ public class ExercicioDois {
             // Abaixo de 18,5 | Abaixo do Peso
             // Entre 18,6 e 24,9 | Peso Ideal
             // Entre 25,0 e 29,9 | Levemente acima do peso
-            // Entre 30,0 e 34,9 | Obesidade Grau I
+           // Entre 30,0 e 34,9 | Obesidade Grau I
             // Entre 35,0 e 39,9 | Obesidade Grau II
             // Acima de 40 | Obesidade Grau III (mórbida)
             case 9:
                 // imc(double altura, double peso);
+                System.out.println("Digite a altura: ");
+                double altura = scanner.nextDouble();
+                System.out.println("Digite o peso: ");
+                double peso = scanner.nextDouble();
+                double imc = imc(altura, peso);
+                if (imc < 18.5) {
+                    System.out.println("Abaixo do peso");
+                } else if (imc >= 18.5 && imc <= 24.9){
+                    System.out.println("Peso Ideal");
+                }else if (imc >= 25 && imc <= 29.9) {
+                    System.out.println("Levemente acima do peso");
+                }else if (imc >= 30 && imc <= 34.9){
+                    System.out.println("Obesidade Grau I");
+                }else if (imc >= 35 && imc <= 39.9){
+                    System.out.println("Obesidade Grau II");
+                }else if (imc >= 40) {
+                    System.out.println("Obsedidade Grau III (mórbida)")
+                }
                 break;
             // 10) Crie um programa que receba dois valores e solicite a operação a ser realizada (+ - * /). Ao final imprima o resultado.
             case 10:
                 // operador(int valorUm, int valorDois, char operacao);
+                System.out.println("Digite o primeiro valor: ");
+                int valorUm = scanner.nextInt();
+
+                System.out.println("Digite o segundo valor: ");
+                int valorDois = scanner.nextInt();
+
+                System.out.println("Digite a operação (+ - * /)");
+                char operacao = scanner.next().charAt(0);
+
+                double resultado = operador(valorUm, valorDois, operacao);
+
+                System.out.println("O valor da operação é" + resultado);
                 break;
             // DESAFIO: Crie um programa que receba um valor em reais e determine qual o mínimo de notas necessárias para entregá-lo. <br> Notas: R$ 200, R$ 100, R$ 50, R$ 10, R$ 5, R$ 1 <br> Exemplo: R$ 15 -> 1 nota de R$ 10 e 1 nota de R$ 5
             case 11:
                 // notasNecessarias(int valor);
+                System.out.println("Digite o valor em reais: ");
+                double valor = scanner.nextDouble();
+                int[] notas = notasNecessarias(valor);
+                System.out.println(Arrays.toString(notas));
             default:
                 System.out.println("Operação inválida");
                 break;
@@ -164,7 +211,7 @@ public class ExercicioDois {
 
     public static double calculaMedia(double notaUm, double notaDois, double notaTres) {
 
-            double notas = (notaUm + notaDois + notaTres) /3;       
+            double notas = (notaUm + notaDois + notaTres) /3;      
             if ( notas > 7.0){
                 System.out.println("Você foi aprovado");
             }
@@ -186,11 +233,22 @@ public class ExercicioDois {
     }
 
     public static char[] letraALetra(String palavra) {
-        return new char[1];
+        char[] letras = new char [palavra.length()];
+
+        for (int i = 0; i < letras.length; i++){
+            letras[i] = palavra.charAt(i);
+        }
+        
+        return letras;
     }
 
     public static int numerosImpares() {
-        return 0;
+        int soma = 0;
+        for (int i = 1; i < 500; i++){
+            if ( i % 2 != 0 && i % 7 == 0);
+                soma = soma + i;
+        }
+        return soma;
     }
 
     public static double calculaMedia(double[] notas) {
@@ -198,18 +256,50 @@ public class ExercicioDois {
     }
 
     public static int fatorial(int numero) {
-        return 0;
+        int fatorial = 1;
+        System.out.println(numero + "! = ");
+        for (int i = numero; i > 0; i--){
+            fatorial *= i;
+            System.out.println(i +(i != 1 ? "x" : ""));
+        }
+        System.out.print("=");
+        return fatorial;
     }
 
     public static double imc(double altura, double peso) {
-        return 0;
+        return peso / (altura * altura);
     }
 
     public static double operador(int valorUm, int valorDois, char operacao) {
-        return 0;
+        double resultado = 0;
+        switch (operacao){
+            case '+':
+                resultado = valorUm + valorDois;
+                break;
+            case '-':
+                resultado = valorUm - valorDois;
+                break;
+            case '*':
+                resultado = valorUm * valorDois;
+                break;
+            case '/':
+                resultado = (double) valorUm / valorDois;
+                break;
+            default:
+                break;        
+        }
+        return resultado;
     }
 
     public static int[] notasNecessarias(int valor) {
-        return new int[6];
+        double[] notas = new double[] { 400, 200, 70, 50, 30, 10, 5, 1, 0.5};
+        int [] valorNotas = new int [notas.length];
+
+        for (int i = 0; i < notas.length; i++){
+            valorNotas[i] = (int) (valor / notas[i]);
+            valor -= valorNotas[i] * notas[i];
+        }
+        
+        return valorNotas ;
     }
 }
