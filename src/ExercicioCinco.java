@@ -65,11 +65,26 @@ public class ExercicioCinco {
     }
 
     public static void criarPessoa() {
-        
+        Pessoa pessoa = new Pessoa("Jackson", 79, 1.70, "31/03/1990");
+        System.out.println(
+            "Nome: " + pessoa.nome + "\n"
+            + "Peso: " + pessoa.peso + "\n"
+            + "Altura: " + pessoa.altura + "\n"
+            + "Data de Nascimento: " + pessoa.dataNascimento + "\n"
+            + "IMC: " + pessoa.imc()
+        );
     }
 
     public static void verificarIMC() {
-        
+        Pessoa pessoa = new Pessoa("Jackson", 79, 1.70, "31/03/1990");
+        System.out.println(
+            "Nome: " + pessoa.nome + "\n"
+            + "Peso: " + pessoa.peso + "\n"
+            + "Altura: " + pessoa.altura + "\n"
+            + "Data de Nascimento: " + pessoa.dataNascimento + "\n"
+            + "IMC: " + pessoa.imc() + "\n"
+            + "Calculo IMC: " + pessoa.imcTexto()
+        );
     }
 
     public static void contaCorrente() {
@@ -85,6 +100,28 @@ public class ExercicioCinco {
     }
 
     public static void cifraCesar() {
+        char[] alfabeto = new char[]{ 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z' };
+        String mensagem = "ataque a roma";
+        int seed = 1;
+        String mensagemCript = "";
+        
+        for (int contadorUm = 0; contadorUm < mensagem.length(); contadorUm++) {
+            char letra = mensagem.charAt(contadorUm);
+            if (letra != ' ') {
+                int letraIndice = 0;
+                for (int contadorDois = 0; contadorDois < alfabeto.length; contadorDois++) {
+                    if (alfabeto[contadorDois] == letra) {
+                        letraIndice = contadorDois;
+                        break;
+                    }
+                }
+                mensagemCript += alfabeto[letraIndice + seed];
+            } else {
+                mensagemCript += " ";
+            }
+        }
+        System.out.println(mensagemCript);
+
         
     }
 }
