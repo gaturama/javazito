@@ -123,6 +123,18 @@ public class ExercicioDois {
             // 4) Crie um programa que imprima a tabuada de 0 a 10.
             case 4:
                 // tabuada(int numero);
+                int valores;
+                int multip = 0;
+                int total = 0;
+
+                Scanner ler = new Scanner(System.in);
+                System.out.println("Digite um número: ");
+                valores = ler.nextInt();
+
+                for (int x=0; x<10; x++){
+                    total = valores * ++multip;
+                    System.out.println(valores + " x " + multip + " = " + total );
+                }
                 break;
             // 5) Crie um programa que receba uma String e imprima linha a linha suas letras.
             case 5:
@@ -148,6 +160,14 @@ public class ExercicioDois {
             // 8) Crie um programa que receba um valor e imprima o fatorial desse número. Ex.: 3! = 3 x 2 x 1 = 6.
             case 8:
                 // fatorial(int numero);
+                int fatorial = 1;
+
+                for(int i = 1; i < 11; i++){
+                    fatorial *= i;
+
+                    System.out.println("Fatorial de " +i+"=" + fatorial);
+                }
+
                 break;
             // 9) Crie um programa que receba a altera e o peso e calcule o IMC:
             // 
@@ -177,7 +197,7 @@ public class ExercicioDois {
                 }else if (imc >= 35 && imc <= 39.9){
                     System.out.println("Obesidade Grau II");
                 }else if (imc >= 40) {
-                    System.out.println("Obsedidade Grau III (mórbida)")
+                    System.out.println("Obsedidade Grau III (mórbida)");
                 }
                 break;
             // 10) Crie um programa que receba dois valores e solicite a operação a ser realizada (+ - * /). Ao final imprima o resultado.
@@ -198,14 +218,14 @@ public class ExercicioDois {
                 break;
             // DESAFIO: Crie um programa que receba um valor em reais e determine qual o mínimo de notas necessárias para entregá-lo. <br> Notas: R$ 200, R$ 100, R$ 50, R$ 10, R$ 5, R$ 1 <br> Exemplo: R$ 15 -> 1 nota de R$ 10 e 1 nota de R$ 5
             case 11:
-                // notasNecessarias(int valor);
-                System.out.println("Digite o valor em reais: ");
-                double valor = scanner.nextDouble();
-                int[] notas = notasNecessarias(valor);
-                System.out.println(Arrays.toString(notas));
+               System.out.println("Digite o valor em reais: ");
+               double valor = scanner.nextDouble();
+               int[] notas = notasNecessarias(valor);
+               System.out.println(Arrays.toString(notas));
             default:
                 System.out.println("Operação inválida");
                 break;
+           
         }
     }
 
@@ -291,7 +311,7 @@ public class ExercicioDois {
         return resultado;
     }
 
-    public static int[] notasNecessarias(int valor) {
+    public static int[] notasNecessarias(double valor) {
         double[] notas = new double[] { 400, 200, 70, 50, 30, 10, 5, 1, 0.5};
         int [] valorNotas = new int [notas.length];
 
